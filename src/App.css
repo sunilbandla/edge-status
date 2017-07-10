@@ -1,24 +1,30 @@
-.App {
-  text-align: center;
+.app {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.appHeader {
+    text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.feature {
+    padding: 15px;
+    margin-left: 45px;
+    margin-bottom: 15px;
 }
 
-.App-intro {
-  font-size: large;
+.featureStatus {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+    flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.mdl-card {
+    width: 100%;
+}
+
+.featureCategory {
+    margin: 15px;
 }
