@@ -1,17 +1,14 @@
-.app {
-    max-width: 1280px;
-    margin: 0 auto;
-    font-family: "Roboto","Helvetica","Arial",sans-serif;
-}
-
-.appHeader {
-    text-align: center;
+.content {
+    min-height: 50vh;
+    width: 100%;
+    padding: 15px 0;
 }
 
 .feature {
     padding: 15px;
     margin-left: 45px;
     margin-bottom: 15px;
+    width: 90%;
 }
 
 .featureStatus {
@@ -21,10 +18,15 @@
     flex: 1;
 }
 
-.mdl-card {
-    width: 100%;
-}
-
 .featureCategory {
     margin: 15px;
+}
+
+.mdl-spinner {
+    margin: 0 auto;
+    display: flex;
+}
+
+.mdl-layout__container {
+    position: relative;
 }

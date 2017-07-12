@@ -11,7 +11,7 @@ export class FeatureTable extends React.Component {
             if (feature.name.toLowerCase().indexOf(filterText) > -1) {
                 ret = false;
             }
-            if (!ret && feature.category && feature.summary.toLowerCase().indexOf(filterText) > -1) {
+            if (!ret && feature.summary && feature.summary.toLowerCase().indexOf(filterText) > -1) {
                 ret = false;
             }
             if (!ret && feature.ieStatus && feature.ieStatus.priority && feature.ieStatus.priority.toLowerCase().indexOf(filterText) > -1) {
@@ -28,14 +28,14 @@ export class FeatureTable extends React.Component {
         let rows = [];
         let lastCategory = null;
         let filterText = this.props.filterText && this.props.filterText.toLowerCase();
-        this.props.features.forEach((feature) => {
+        this.props.features.forEach((feature, index) => {
             if (this.filterOutFeature(filterText, feature)) {
                 return;
             }
             if (feature.category !== lastCategory) {
-                rows.push(<FeatureCategoryRow category={feature.category} key={feature.category} />);
+                rows.push(<FeatureCategoryRow category={feature.category} key={feature.category + index} />);
             }
-            rows.push(<FeatureRow feature={feature} key={feature.name} />);
+            rows.push(<FeatureRow feature={feature} key={index} />);
             lastCategory = feature.category;
         });
         return (
