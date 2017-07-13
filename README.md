@@ -1,4 +1,4 @@
-Edge platform feature status
+## Edge platform feature status
 
 ## Credits
  - Create React App
