@@ -59,7 +59,7 @@ class App extends Component {
             features: [],
             loaded: true
         });
-        err && err.text().then(console.warn);
+        err && err.text && err.text().then(console.warn);
     }
 
     render() {
