@@ -69,7 +69,7 @@ class App extends Component {
                     <header className="mdl-layout__header">
                         <div className="mdl-layout-icon"></div>
                         <div className="mdl-layout__header-row">
-                            <span className="mdl-layout__title">Edge platform status</span>
+                            <span className="mdl-layout__title">Microsoft Edge platform status</span>
                         </div>
                     </header>
                 </div>
