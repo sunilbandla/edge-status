@@ -313,6 +313,20 @@ module.exports = {
       navigateFallbackWhitelist: [/^(?!\/__).*/],
       // Don't precache sourcemaps (they're large) and build asset manifest:
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+      runtimeCaching: [
+          {
+              urlPattern: /^http(s)?:\/\/fonts\.googleapis\.com\//,
+              handler: 'cacheFirst'
+          },
+          {
+              urlPattern: /^http(s)?:\/\/code\.getmdl\.io\//,
+              handler: 'cacheFirst'
+          },
+          {
+              urlPattern: /^http(s)?:\/\/cdn\.rawgit\.com\//,
+              handler: 'cacheFirst'
+          }
+      ]
     }),
     // Moment.js is an extremely popular library that bundles large locale files
     // by default due to how Webpack interprets its code. This is a practical
